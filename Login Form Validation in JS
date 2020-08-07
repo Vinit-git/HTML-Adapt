@@ -1,0 +1,44 @@
+Design a Login page for user validation as per the below snapshot.
+
+    Display heading in H1 format:Login Page
+    Use the table tag to align the elements
+    Table should be aligned in the centre of the page
+    Create a javascript function UserLogin() which needs to validate the user information.
+    Call the function on the onclick event of ‘Login’ button
+    If UserName entered is "admin", display a msg "Valid User", else display "Invalid User" The message should be displayed in a div tag with id ‘info’
+
+-------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body bgcolor=blue>
+        <script>
+          function UserLogin(){ 
+            var un=document.getElementById("uname").value;
+            if(un=="admin")
+                document.getElementById("info").innerHTML="valid User";
+            else
+                document.getElementById("info").innerHTML="Invalid User";
+                
+          }
+        </script>
+        <form>
+            <h1 align=center>Login Page</h1>
+        <table  align=center>
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" id="uname"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="pass"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="UserLogin()" value="Login">
+        </table>
+        <div id="info"></div>
+        </form>
+    </body>
